@@ -26,6 +26,9 @@ class ContactTest: XCTestCase {
 }
 """
 
+        jsonData = Data(testString.utf8)
+
+
     }
 
     override func tearDown() {
