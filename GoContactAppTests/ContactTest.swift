@@ -15,20 +15,16 @@ class ContactTest: XCTestCase {
 
     override func setUp() {
 
-        let testJSON : [String: Any] = [
-            "id": 1010,
-            "first_name": "Tarang",
-            "last_name": "Kaneriya",
-            "profile_pic": "/images/missing.png",
-            "favorite": true,
-            "url": "http://gojek-contacts-app.herokuapp.com/contacts/1010.json"
-        ]
-
-        do {
-            jsonData = try JSONSerialization.data(withJSONObject: testJSON, options: JSONSerialization.WritingOptions()) as Data
-        } catch _ {
-            print ("JSON Failure")
-        }
+        let testString = """
+{
+    "id": 16239,
+    "first_name": "Angelina",
+    "last_name": "Jolie",
+    "profile_pic": "/images/missing.png",
+    "favorite": true,
+    "url": "http://gojek-contacts-app.herokuapp.com/contacts/16239.json"
+}
+"""
 
     }
 

@@ -25,7 +25,7 @@ class ContactHomeViewModelTest: XCTestCase {
 
         requestManager?.getContactResult = .success(payload: [Contact.with()])
 
-        let viewModel = ContactHomeViewModel(apiManager: requestManager!)
+        let viewModel = ContactHomeViewModel(requestManager: requestManager!)
         viewModel.requestData()
 
         XCTAssert(viewModel.contactList.count == 1)
@@ -36,7 +36,7 @@ class ContactHomeViewModelTest: XCTestCase {
 
         requestManager?.getContactResult = .success(payload: [])
 
-        let viewModel = ContactHomeViewModel(apiManager: requestManager!)
+        let viewModel = ContactHomeViewModel(requestManager: requestManager!)
         viewModel.requestData()
 
         XCTAssert(viewModel.contactList.isEmpty)
